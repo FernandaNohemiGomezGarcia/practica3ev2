@@ -20,13 +20,21 @@ h3{
     margin-left: 600px;
     width: 300px;
 }
-p{
+ol, p{
     background-color: #f1e951;
     border-radius: 12px;
     border: 5px solid #f1e951;
     bottom: 5px;
     width: 300px;
     margin-left: 600px;
+}
+ol {
+    background-color: #81ce82;;
+    border-radius: 12px;
+    border: 5px solid #81ce82;;
+    bottom: 5px;
+    width: 300px;
+    margin-left: 580px;
 }
 #id{
     background-color: #81ce82;
