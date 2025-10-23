@@ -8,8 +8,7 @@ const listaHabilidades = document.getElementById("listaHabilidades");
 async function buscarPokemon(){
     const respuesta = await fetch("https://pokeapi.co/api/v2/pokemon/" + inputnombre.value);
     const infoPokemon = await respuesta.json();
-        //poner el id en el parerafo llamado id
-    id.innerText = infoPokemon.id;
+    
     //poner el id en el parerafo llamado id
     id.innerText = infoPokemon.id;
 
@@ -22,7 +21,7 @@ async function buscarPokemon(){
     //Mostrar habiliades
     listaHabilidades.innerHTML = "";
 
-    infoPokemon.abilities.foreach(a => {
+    infoPokemon.abilities.forEach(a => {
         const item = document.createElement("li")
         item.innerText = a.ability.name;
         listaHabilidades.appendChild(item);
@@ -30,7 +29,6 @@ async function buscarPokemon(){
 };
 botonBuscar.addEventListener("click", e => {
     e.preventDefault();
-    console.log("hola");
     buscarPokemon();
 
 })
